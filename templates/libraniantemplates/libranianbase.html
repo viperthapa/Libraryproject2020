@@ -96,7 +96,7 @@
 			
 		</div> -->
 	</div>
-	<div class="logo-navigation-w3layouts" style="background-color: #00FFFF;">
+	<div class="logo-navigation-w3layouts" style="background-color: #00BCD4;">
 		<div class="container">
 		<div class="logo-w3">
 			<a href="#"><h1 style="color: black;"><span>Mylibrary</span></h1></a>
@@ -111,9 +111,8 @@
   						{% url 'libraryapp:services' as personal %} -->
   						{% with url_name=request.resolver_match.url_name %}
 						<li><a href="{% url 'libraryapp:home' %}" class="{% if url_name == 'home' %}active{% endif %}">Home</a></li>
-						<li><a href="{% url 'libraryapp:about' %}" class="{% if url_name == 'about' %}active{% endif %}">About</a></li>
 						<li><a  href="{% url 'libraryapp:login' %}"><span class="#" aria-hidden="true"></span>login</a></li>
-						<li><a  href="#"><span class="#" aria-hidden="true"></span>Register</a></li>
+						<li><a  href="{% url 'libraryapp:userregistration' %}"><span class="#" aria-hidden="true"></span>Register</a></li>
 
 
 						<li><a class="{% if url_name == 'contact' %}active{% endif %}" href="{% url 'libraryapp:contact' %}">Contact</a></li>

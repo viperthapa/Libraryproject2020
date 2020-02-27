@@ -1,0 +1,77 @@
+{% extends 'libraniantemplates/libranianbase.html' %}
+{% load static %}
+<html>
+<head><title>{% block title %}register{% endblock %}</title>
+<style>
+    
+        
+/*--meadia quiries end here--*/
+</style>
+</head>
+{% block content %}
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Signup Form</h2>
+    
+    <div class="signup" style="margin:20px 200px 20px 560px ;">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>username</p>
+                <p>{{ form.username }}</p>
+                <p>password</p>
+                <p>{{ form.password }}</p>
+                <p>confirm password</p>
+                <p>{{ form.confirm_password }}</p>
+                <p>name</p>
+                <p>{{ form.name }}</p>
+                <p>semester</p>
+                <p>{{ form.semester }}</p>
+                <p>section</p>
+                <p>{{ form.section }}</p>
+                <p>image</p>
+                <p>{{ form.image }}</p>
+                <br>
+                <button class="btn btn-primary" style="width: 300px;">Register</button>
+	 	        <!-- <input type="submit" value="REGISTER NOW!"> -->
+                
+            
+            </form>
+
+		<!-- <span class="ribben">CREATE AN ACCOUNT</span>
+		<p>Email : <span class="dot"> </span></p>
+		<input type="text" placeholder="example@email.com" required="">
+		<p>Choose Password : <span class="dot"> </span></p>
+	 	<input type="password" placeholder="" required="">
+	 	<p>Confirm Password <span class="dot"> </span></p>
+	 	<input type="password" placeholder="" required=""> -->
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
+{% endblock %}

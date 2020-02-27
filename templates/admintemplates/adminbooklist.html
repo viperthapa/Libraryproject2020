@@ -4,8 +4,12 @@
 	<div class="row">
 		<div class="col-md-12 table-responsive-sm">
 			<h3>Book list</h3>
-			<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
-			
+			{% for group in user.groups.all %}
+               {% if group.name == 'admin' %}
+			     	<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
+				{% endif %}
+			{% endfor %}	
+		
 			<table class=" table table-bordered ">
 				<thead style="background-color: yellow;color:black;">
 					<tr class="text-dark">
@@ -16,7 +20,11 @@
 						<th>category</th>
 						<th>publisher</th>
 						<th>author</th>
-						<th>action</th>
+						{% for group in user.groups.all %}
+							{% if group.name == 'admin' %}
+								<th>action</th>
+							{% endif %}
+						{% endfor %}
 				
 					</tr>	
 
@@ -33,11 +41,15 @@
 
 						<td>{{book.publisher}}</td>
 						<td>{{book.author}}</td>
-						<td>
-							<a href="{% url 'libraryapp:bookupdate' book.id %}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
-							<a href="{% url 'libraryapp:bookdelete' book.id %}" class="btn btn-warning"><i class="fa fa-trash"></i></a>
+						{% for group in user.groups.all %}
+							{% if group.name == 'admin' %}
+								<td>
+									<a href="{% url 'libraryapp:bookupdate' book.id %}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+									<a href="{% url 'libraryapp:bookdelete' book.id %}" class="btn btn-warning"><i class="fa fa-trash"></i></a>
 
-						</td>
+								</td>
+							{% endif %}
+						{% endfor %}
 
 
 						<td>

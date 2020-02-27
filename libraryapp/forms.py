@@ -25,8 +25,12 @@ class BookForm(forms.ModelForm):
         # fields = '__all__'
 
 
-class StudentForm(forms.ModelForm):
+class UserForm(forms.ModelForm):
+    username = forms.CharField(widget=forms.TextInput())
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'style':'width:300px'}))
+    confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={'style':'width:300px'}))
+
     class Meta:
-        model = Student
-        fields = ['name','program','semester','section','image']
+        model = NormalUser
+        fields = ['username','password','confirm_password','name','semester','section','image']
         

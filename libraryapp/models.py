@@ -40,14 +40,6 @@ class Libranian(TimeStamp):
         return self.name
 
 
-class Program(TimeStamp):
-    title = models.CharField(max_length=100)
-    duration = models.DateTimeField(auto_now_add=True)
-    image = models.FileField(upload_to='program')
-
-    def __str__(self):
-        return self.title
-
 
 SEMESTER = (
     ('semester 1', 'SEMESTER I'),
@@ -68,16 +60,21 @@ SECTION = (
 )
 
 
-class Student(TimeStamp):
+class NormalUser(TimeStamp):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    program = models.ForeignKey(Program, on_delete=models.CASCADE)
     semester = models.CharField(max_length=100, choices=SEMESTER)
     section = models.CharField(max_length=100, choices=SECTION)
     image = models.ImageField(upload_to='student')
 
+    
+    def save(self, *args, **kwargs):
+        group, created = Group.objects.get_or_create(name='normaluser')
+        self.user.groups.add(group)
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.name
-
 
 class BookCategory(TimeStamp):
     title = models.CharField(max_length=100)
@@ -120,22 +117,3 @@ class Book(TimeStamp):
     def __str__(self):
         return self.title
 
-
-class Issue(TimeStamp):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    libranian = models.ForeignKey(Libranian, on_delete=models.CASCADE)
-    book = models.ManyToManyField(Book)
-    status = models.CharField(max_length=25)
-
-
-    def __str__(self):
-        return self.student.name
-
-
-class Return(TimeStamp):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    libranian = models.ForeignKey(Libranian, on_delete=models.CASCADE)
-    book = models.ManyToManyField(Book)
-
-    def __str__(self):
-        return self.student.name
