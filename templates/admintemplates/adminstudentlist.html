@@ -1,0 +1,46 @@
+{% extends 'admintemplates/adminbase.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+		<div class="col-md-12 table-responsive-sm">
+			<h3>Book list</h3>
+			<a href="{% url 'libraryapp:studentcreate' %}" class="btn btn-info"><i class="#"></i>Add</a>
+			
+			<table class=" table table-bordered ">
+				<thead style="background-color:#000080;color:black;">
+					<tr class="text-dark">
+						<th>S.N</th>
+						<th>name</th>
+						<th>program</th>
+						<th>image</th>
+						<th>semester</th>
+						<th>section</th>
+						<th>action</th>
+				
+					</tr>	
+
+				</thead>
+				<tbody>
+					{% for student in studentlists %}
+					<tr class="text-secondary">
+						<td>{{forloop.counter}}</td>
+						<td>{{student.name}}</td>
+						<td>{{student.program}}</td>
+						<td><img src="{{student.image.url}}" width="75"></td>
+						<td>{{student.semester}}</td>
+						<td>{{student.section}}</td>				
+						<td>
+							<a href="{% url 'libraryapp:studentupdate' student.id %}" class="btn btn-warning"><i></i>Edit</a>
+							<a href="{% url 'libraryapp:studentdelete' student.id %}" class="btn btn-success"><i></i>Remove</a>
+
+						</td>
+					</tr>	
+
+
+					{% endfor %}
+				</tbody>
+					
+			</table>
+		</div>
+	</div>
+{% endblock %}

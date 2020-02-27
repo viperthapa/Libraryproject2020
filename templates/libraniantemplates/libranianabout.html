@@ -1,0 +1,47 @@
+{% extends 'libraniantemplates/libranianbase.html' %}
+{% load static %}
+<title>{% block title %}about{% endblock %}</title>
+
+<body>
+{% block content %}
+<div class="about-w3-agile" id="about">
+		<div class="container">
+			<div class="wthree_about_grids">
+				<div class="col-md-6 wthree_about_grid_left">
+					<h3>About us</h3>
+							<p>A library is a curated collection of sources of information and similar resources, selected by experts and made accessible to a defined community for reference or borrowing, often in a quiet environment conducive to study. It provides physical or digital access to material, and may be a physical location or a virtual space, or both. A library's collection can include books, periodicals, newspapers, manuscripts, films, maps, prints, documents, microform, CDs, cassettes, videotapes, DVDs, Blu-ray Discs, e-books, audiobooks, databases, and other formats</p>
+				</div>
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						  </div>
+						  <div class="modal-body">
+							<p>Nam tincidunt leo nec molestie accumsan. Fusce iaculis sit amet tellus vel ultrices. Phasellus in tellus ut orci accumsan facilisis eget in ante. Aliquam laoreet finibus augue non pharetra. Nullam tincidunt ex quis massa auctor, quis auctor erat semper. Morbi a justo auctor, semper mi viverra, lacinia libero. Praesent sodales augue tristique tellus eleifend, eu placerat eros hendrerit. Cras imperdiet lorem nec magna congue, blandit auctor arcu posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 wthree_about_grid_right">
+					<img src="{% static 'images/11.jpg' %}" alt=" " class="img-responsive" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	{% endblock %}
+
+</body>

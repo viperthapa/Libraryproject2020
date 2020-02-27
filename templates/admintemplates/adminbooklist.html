@@ -1,0 +1,55 @@
+{% extends 'admintemplates/adminbase.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+		<div class="col-md-12 table-responsive-sm">
+			<h3>Book list</h3>
+			<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
+			
+			<table class=" table table-bordered ">
+				<thead style="background-color: yellow;color:black;">
+					<tr class="text-dark">
+						<th>S.N</th>
+						<th>title</th>
+						<th>barcode</th>
+						<th>image</th>
+						<th>category</th>
+						<th>publisher</th>
+						<th>author</th>
+						<th>action</th>
+				
+					</tr>	
+
+				</thead>
+				<tbody>
+					{% for book in booklists %}
+					<tr style="color: black;">
+						<td>{{forloop.counter}}</td>
+						<td>{{book.title}}</td>
+						<td>{{book.barcode}}</td>
+						<td><img src="{{book.image.url}}" width="75"></td>
+						<td>{{book.category}}</td>
+						
+
+						<td>{{book.publisher}}</td>
+						<td>{{book.author}}</td>
+						<td>
+							<a href="{% url 'libraryapp:bookupdate' book.id %}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+							<a href="{% url 'libraryapp:bookdelete' book.id %}" class="btn btn-warning"><i class="fa fa-trash"></i></a>
+
+						</td>
+
+
+						<td>
+							
+						</td>
+					</tr>	
+
+
+					{% endfor %}
+				</tbody>
+					
+			</table>
+		</div>
+	</div>
+{% endblock %}
