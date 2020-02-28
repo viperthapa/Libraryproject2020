@@ -18,6 +18,8 @@ urlpatterns = [
          BooKUpdateView.as_view(), name='bookupdate'),
     path('admin/book/delete/<int:pk>/',
          BookdeleteView.as_view(), name='bookdelete'),
+    path("search/", SearchView.as_view(), name='search'),
+
 
    
 

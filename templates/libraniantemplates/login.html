@@ -10,10 +10,7 @@
         <div class="card-header" style="background-color: yellow;text-align: center; padding: 20px;">
            Login
         </div>
-        {% if error %}
-          {{ error }}
-        {% endif %}
-        <br>
+        
       <form method="post" action="#">
          {% csrf_token %}
           <!-- <div class="form-group">
@@ -37,6 +34,10 @@
       </form>
          
     </div>
+    {% if error %}
+          <li style="color: black;">{{ error }}</li>
+    {% endif %}
+        <br>
   </div>
 </div>
           

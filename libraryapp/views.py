@@ -4,6 +4,7 @@ from django.views.generic import *
 from .forms import *
 from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse_lazy
+from django.db.models import Q
 
 
 # Create your views here.
@@ -26,7 +27,7 @@ class ContactView(CreateView):
 class LoginForm(FormView):
     template_name = 'libraniantemplates/login.html'
     form_class = LoginForm
-    success_url = '/admin/home/'
+    success_url = '/admin/book/list/'
 
     def form_valid(self, form):
         uname = form.cleaned_data['username']
@@ -39,6 +40,7 @@ class LoginForm(FormView):
         else:
             return render(self.request, self.template_name, {'error': 'username  didnot exists', 'form': form})
         return super().form_valid(form)
+    
 
 
 
@@ -86,3 +88,19 @@ class BookdeleteView(DeleteView):
     model = Book
     success_url = reverse_lazy("libraryapp:booklist")
 
+
+#search view
+
+class SearchView(TemplateView):
+    template_name = 'admintemplates/searchresult.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        keyword = self.request.GET.get("search")
+        books = Book.objects.filter(
+            Q(title__icontains=keyword) | Q(author__icontains=keyword))
+        categorys = BookCategory.objects.filter(Q(title__icontains=keyword))
+        context['books'] = books
+        context['categorys'] = categorys
+
+        return context
