@@ -42,18 +42,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Mylibrary</a>
+                <a class="navbar-brand">Mylibrary</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-nav navbar-right">
-				
-			    <li class="dropdown">
-                    <!-- <br> -->
-                    <a style="color: wheat;">Welcome:{{ request.user }}</a>
-	        		<!-- <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="{% static 'adminstatic/images/1.png' %}"><span class="badge">9</span></a> -->
-	        		
-	      		</li>
-			</ul>
+                    <!-- <p>Welcome : {{ request.user.username }}</p> -->
+                    <li class="dropdown">
+                            
+                        <a href="#" style="color: white;" data-toggle="dropdown"><img src="{% static 'adminstatic/images/3.png' %}" width="40px;" height="40px;">Welcome : {{ request.user.username }}</a>
+                        <ul class="dropdown-menu">
+                            <!-- <li class="m_2"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li class="m_2"><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>
+                            <li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span class="label label-default">42</span></a></li>
+                            <li class="m_2"><a href="#"><i class="fa fa-file"></i> Projects <span class="label label-primary">42</span></a></li>
+                            <li class="divider"></li>
+                            <li class="m_2"><a href="#"><i class="fa fa-shield"></i> Lock Profile</a></li> -->
+                            <li class="m_2"><a href="{% url 'libraryapp:logout' %}"><i class="fa fa-lock"></i> Logout</a></li>	
+                        </ul>
+                      </li>
+                </ul>
 			<form class="navbar-form navbar-right" action="/search/">
               <input type="text" name="search" class="form-control" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
             </form>
@@ -96,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         {% endblock %}
 
 		<div class="copy">
-            <p>Copyright &copy; 2015 Modern. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">Viper</a> </p>
+            <p>Copyright &copy; 2015 Modern. All Rights Reserved | Design by <a href="#" target="_blank">Viper</a> </p>
 	    </div>
 		</div>
        </div>

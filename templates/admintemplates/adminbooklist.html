@@ -2,6 +2,13 @@
 {% load static %}
 {% block content %}
 	<div class="row">
+			{% if messages %}
+           	<ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
 		<div class="col-md-12 table-responsive-sm">
 			<h3>Book list</h3>
                {% if user.is_superuser %}
@@ -19,6 +26,7 @@
 						<th>category</th>
 						<th>publisher</th>
 						<th>author</th>
+						<th>Rating</th>
 						{% if user.is_superuser %}
 						
 							<th>action</th>
@@ -51,7 +59,8 @@
 
 
 						<td>
-							
+								<a href="{% url 'libraryapp:bookdetail' book.id %}" class="btn btn-primary btn-sm" role="button">Give Rating</a>
+
 						</td>
 					</tr>	
 

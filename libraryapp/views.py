@@ -5,6 +5,8 @@ from .forms import *
 from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse_lazy
 from django.db.models import Q
+from django.shortcuts import render,get_object_or_404,redirect
+from django.contrib import messages
 
 
 # Create your views here.
@@ -43,6 +45,11 @@ class LoginForm(FormView):
     
 
 
+#logout
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('/login/')
 
 
 
@@ -104,3 +111,19 @@ class SearchView(TemplateView):
         context['categorys'] = categorys
 
         return context
+
+
+def Bookdetail(request,pk):
+    book = get_object_or_404(Book,id=pk)
+    if request.method == "POST":
+        rate=request.POST['rating']
+        ratingObject = BookRating()
+        # print(ratingObject.user.id,"********")
+        # print(ratingObject.request.user,'***')
+        ratingObject.user=request.user
+        ratingObject.book=book
+        ratingObject.rating=rate
+        ratingObject.save()
+        messages.success(request,"Your Rating is submited ")
+        return redirect("libraryapp:booklist")
+    return render(request,'admintemplates/bookrating.html',{'book':book})

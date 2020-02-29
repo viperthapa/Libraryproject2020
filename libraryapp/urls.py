@@ -9,6 +9,8 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('login/', LoginForm.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+
     path('user/registration/', UserRegistration.as_view(),
          name='userregistration'),
     path('admin/home/', AdminHome.as_view(), name='adminhome'),
@@ -19,6 +21,8 @@ urlpatterns = [
     path('admin/book/delete/<int:pk>/',
          BookdeleteView.as_view(), name='bookdelete'),
     path("search/", SearchView.as_view(), name='search'),
+    path('book/<int:pk>/',views.Bookdetail ,name='bookdetail'),
+    
 
 
    

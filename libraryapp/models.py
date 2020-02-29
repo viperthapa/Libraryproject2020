@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User, Group
 # Create your models here.
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class TimeStamp(models.Model):
@@ -101,6 +102,19 @@ class Author(TimeStamp):
         return self.name
 
 
+
+
+rating = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+
+
+
+
+)
 class Book(TimeStamp):
     title = models.CharField(max_length=100)
     barcode = models.CharField(max_length=100)
@@ -117,3 +131,13 @@ class Book(TimeStamp):
     def __str__(self):
         return self.title
 
+
+
+
+class BookRating(models.Model):
+	user   	= models.ForeignKey(User,on_delete=models.CASCADE) 
+	book 	= models.ForeignKey(Book,on_delete=models.CASCADE)
+	rating 	= models.IntegerField(default=1,validators=[MaxValueValidator(5),MinValueValidator(0)])
+		
+# class BookRating(model.Model):
+#     book = models.ForeignKey(Book,on_delete = models.CASCADE)
