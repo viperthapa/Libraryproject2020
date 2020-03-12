@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.shortcuts import render,get_object_or_404,redirect
 from django.contrib import messages
 
+from .recommendation_engine import RecommendationiEngine
 
 # Create your views here.
 
@@ -16,13 +17,10 @@ class HomeView(TemplateView):
     template_name = 'libraniantemplates/libranianhome.html'
 
 
-
-
 class ContactView(CreateView):
     template_name = 'libraniantemplates/libraniancontact.html'
     form_class = ContactForm
     success_url = '/'
-
 
 
 #login form
@@ -42,7 +40,6 @@ class LoginForm(FormView):
         else:
             return render(self.request, self.template_name, {'error': 'username  didnot exists', 'form': form})
         return super().form_valid(form)
-    
 
 
 #logout
@@ -76,12 +73,26 @@ class BookListView(ListView):
     queryset = Book.objects.all().order_by('-id')
     context_object_name = 'booklists'
 
+    def get_context_data(self, **kwargs):
+        context = super(BookListView, self).get_context_data(**kwargs)
+        recommender = RecommendationiEngine()
+        recommended_book_title = recommender.get_recommendation(self.request.user.id, 0.1)
+        # recommended_book = []
+
+        # for book in Book.objects.filter(pk__in = recommended_book_id):
+        #     recommended_book.append(book)
+        recommended_book = Book.objects.filter(title__in = recommended_book_title)
+        context['recommendation'] = recommended_book #['DAA', 'DBA']
+        return context
+
+    # def get_success_url(self):
+    #     user_id = self.request.user.id # Get user_id from request
+
 
 class BookCreateView(CreateView):
     template_name = 'admintemplates/adminbookcreate.html'
     form_class = BookForm
     success_url = '/admin/book/list/'
-
 
 class BooKUpdateView(UpdateView):
     template_name = 'admintemplates/adminbookcreate.html'

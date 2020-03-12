@@ -14,8 +14,8 @@
                {% if user.is_superuser %}
 			     	<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
 				{% endif %}
-			
-		
+
+
 			<table class=" table table-bordered ">
 				<thead style="background-color: yellow;color:black;">
 					<tr class="text-dark">
@@ -28,12 +28,12 @@
 						<th>author</th>
 						<th>Rating</th>
 						{% if user.is_superuser %}
-						
+
 							<th>action</th>
-							
+
 						{% endif %}
-				
-					</tr>	
+
+					</tr>
 
 				</thead>
 				<tbody>
@@ -44,7 +44,7 @@
 						<td>{{book.barcode}}</td>
 						<td><img src="{{book.image.url}}" width="75"></td>
 						<td>{{book.category}}</td>
-						
+
 
 						<td>{{book.publisher}}</td>
 						<td>{{book.author}}</td>
@@ -62,13 +62,42 @@
 								<a href="{% url 'libraryapp:bookdetail' book.id %}" class="btn btn-primary btn-sm" role="button">Give Rating</a>
 
 						</td>
-					</tr>	
+					</tr>
 
 
 					{% endfor %}
 				</tbody>
-					
+
 			</table>
+
+			<!-- recommended list -->
+			<div class="row recommendation-section">
+				<h2>Recommended Books</h2>
+				<h3>{{ recommendation }}</h3>
+				<div class="row">
+					<div class="card-deck">
+				{% for book in recommendation %}
+						<div class="col-md-3">
+							<div class="card" style="">
+						  <img class="card-img-top" src="{{ book.image.url }}" alt="Card image ">
+						  <div class="card-body">
+								<h4 class="card-title">{{ book.title }}</h4>
+						    <p class="card-text">{{ book.publisher }}</p>
+								<!-- <ul class="list-group list-group-flush">
+									<li class="list-group-item">Author: {{ book.author }}</li>
+									<li class="list-group-item">Publisher: {{ book.publisher}}</li>
+							</ul> -->
+							<div class="card-footer">
+								<small>Availale Copies: {{ book.available }}</small>
+							</div>
+						  </div>
+				 	</div>
+						</div>
+
+				{% endfor %}
+			</div>
+			</div>
+			</div>
 		</div>
 	</div>
 {% endblock %}
