@@ -1,0 +1,117 @@
+{% extends 'admintemplates/adminbase.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+			{% if messages %}
+           	<ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+		<div class="col-md-12 table-responsive-sm">
+			<h3>Book list</h3>
+               {% if user.is_superuser %}
+			     	<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
+				{% endif %}
+
+
+			<table class=" table table-bordered ">
+				<thead style="background-color: yellow;color:black;">
+					<tr class="text-dark">
+						<th>S.N</th>
+						<th>title</th>
+						<th>barcode</th>
+						<th>image</th>
+						<th>category</th>
+						<th>publisher</th>
+						<th>author</th>
+						<th>Rating</th>
+						{% if user.is_superuser %}
+
+							<th>action</th>
+
+						{% endif %}
+
+					</tr>
+
+				</thead>
+				<tbody>
+					{% for book in books %}
+					<tr style="color: black;">
+						<td>{{forloop.counter}}</td>
+						<td>{{book.title}}</td>
+						<td>{{book.barcode}}</td>
+						<td><img src="{{book.image.url}}" width="75"></td>
+						<td>{{book.category}}</td>
+
+
+						<td>{{book.publisher}}</td>
+						<td>{{book.author}}</td>
+
+							{% if user.is_superuser %}
+								<td>
+									<a href="{% url 'libraryapp:bookupdate' book.id %}" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+									<a href="{% url 'libraryapp:bookdelete' book.id %}" class="btn btn-warning"><i class="fa fa-trash"></i></a>
+
+								</td>
+							{% endif %}
+
+
+						<td>
+								<a href="{% url 'libraryapp:bookdetail' book.id %}" class="btn btn-primary btn-sm" role="button">Give Rating</a>
+
+						</td>
+					</tr>
+
+
+					{% endfor %}
+				</tbody>
+
+			</table>
+			<!-- <div class="card-body">
+				<h4>Recommended Books</h4>
+
+				{% for book in recommendation %}
+
+				<a href="#"  class="btn btn-outline-secondary">
+					  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+					  <br>
+	  
+					<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
+	  
+				  </a>
+				{% endfor %}
+			  </div> -->
+			<!-- recommended list -->
+
+			<!--<div class="row recommendation-section">
+				 <h2>Recommended Books</h2>
+				<h3>{{ recommendation }}</h3>
+				<div class="row">
+					<div class="card-deck">
+						{% for book in recommendation %}
+							<div class="col-md-3">
+								<div class="card" style="">
+							<img class="card-img-top" src="{{ book.image.url }}" alt="Card image ">
+							<div class="card-body">
+									<h4 class="card-title">{{ book.title }}</h4>
+								<p class="card-text">{{ book.publisher }}</p>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">Author: {{ book.author }}</li>
+										<li class="list-group-item">Publisher: {{ book.publisher}}</li>
+								</ul>
+								<div class="card-footer">
+									<small>Availale Copies: {{ book.available }}</small>
+								</div>
+							</div>
+				 	</div>
+						</div>
+
+				{% endfor %}
+				</div>
+			</div> -->
+			</div>
+		</div>
+	</div>
+{% endblock %}
