@@ -69,8 +69,18 @@ class RecommendationiEngine():
         # return sorted(book_preferences, key= lambda x: x[1], reverse=True)
         return book_preferences
 
-    def get_recommendation_list(self, books_list):
+    def get_recommendation_from_category(self, books_list, corr_limit):
+
         book_similarities = np.zeros(self.book_corr.shape[0])
+
+        # if (len(books_list) == 1):
+        #     book_index = self.book_titles.index(books_list[0])
+        #     book_similarities += self.book_corr[book_index]
+        #     book_preferences = []
+        #     for i in range(len(self.book_titles)):
+        #         if book_similarities > corr_limit:
+        #             book_preferences.append(self.book_titles[i])
+        #     return book_preferences
 
         for book in books_list:
             # print(book)
@@ -79,9 +89,12 @@ class RecommendationiEngine():
             book_similarities += self.book_corr[book_index]
         book_preferences = []
         for i in range(len(self.book_titles)):
-            book_preferences.append((self.book_titles[i],book_similarities[i]))
+            if book_similarities[i] > corr_limit:
+                book_preferences.append(self.book_titles[i])
+            # book_preferences.append((self.book_titles[i],book_similarities[i])
 
-        return sorted(book_preferences, key= lambda x: x[1], reverse=True)
+        return book_preferences
+        # return sorted(book_preferences, key= lambda x: x[1], reverse=True)
 
 
 recommendation = RecommendationiEngine()

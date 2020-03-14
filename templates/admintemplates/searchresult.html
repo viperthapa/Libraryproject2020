@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 	<div class="row">
-		{% if books %}	
+		{% if books %}
 			<div class="col-md-12 table-responsive-sm">
 				<h3>Book list</h3>
 				{% if user.is_superuser %}
@@ -63,22 +63,23 @@
 					</tbody>
 
 				</table>
+
 				<div class="card-body">
-					<h4>Recommended Books</h4>
-					
-					{% for book in category %}
-	
+					<h4>Similar Books</h4>
+
+					{% for book in recommendation %}
+
 					<a href="#"  class="btn btn-outline-secondary">
-						  <!-- <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;"> -->
+						  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
 						  <br>
-		  
-						<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.category.title }}</button>
-		  
+
+						<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
+
 					  </a>
 					{% endfor %}
 				  </div>
 		{% else %}
-		<h2>matching query doesnot exist</h2>		
+		<h2>matching query doesnot exist</h2>
 		{% endif %}
 			<!-- <div class="card-body">
 				<h4>Recommended Books</h4>
@@ -88,9 +89,9 @@
 				<a href="#"  class="btn btn-outline-secondary">
 					  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
 					  <br>
-	  
+
 					<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
-	  
+
 				  </a>
 				{% endfor %}
 			  </div> -->

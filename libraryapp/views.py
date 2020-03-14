@@ -127,13 +127,27 @@ class SearchView(TemplateView):
         # recommended_book_category = recommender.get_recommendation(self.request.user.id, 0.1)
         # print(recommended_book_category,'recommended_book_category')
 
-        
+
         # recommended_book = Book.objects.filter(category_title=recommended_book_category)
         # print('recommended_book = ',recommended_book)
         context['books'] = books
         context['categorys'] = categorys
 
+        similar_books_title = []
+        for book in books:
+            similar_books_title.append(book.title)
+
+        print("***********SIMILAR BOOK: ", type(similar_books_title))
+        recommended_book_title = recommender.get_recommendation_from_category(similar_books_title, 0.1)
+
+        recommended_book = Book.objects.filter(title__in = recommended_book_title)
+
+        print('recommended_book = ',recommended_book)
+
+        context['recommendation'] = recommended_book #['DAA', 'DBA']
+
         return context
+
     def get_queryset(self):
         category_pk = self.request.GET.get('pk', None)
         print('category pk',category_pk)
