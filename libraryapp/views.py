@@ -77,11 +77,14 @@ class BookListView(ListView):
         context = super(BookListView, self).get_context_data(**kwargs)
         recommender = RecommendationiEngine()
         recommended_book_title = recommender.get_recommendation(self.request.user.id, 0.1)
+        print('recommended_book_title = ',recommended_book_title)
         # recommended_book = []
 
         # for book in Book.objects.filter(pk__in = recommended_book_id):
         #     recommended_book.append(book)
         recommended_book = Book.objects.filter(title__in = recommended_book_title)
+        print('recommended_book = ',recommended_book)
+
         context['recommendation'] = recommended_book #['DAA', 'DBA']
         return context
 
@@ -117,11 +120,27 @@ class SearchView(TemplateView):
         keyword = self.request.GET.get("search")
         books = Book.objects.filter(
             Q(title__icontains=keyword) | Q(author__icontains=keyword))
-        categorys = BookCategory.objects.filter(Q(title__icontains=keyword))
+        # categorys = BookCategory.objects.filter(Q(title__icontains=keyword))
+        categorys = BookCategory.objects.all()
+        print(categorys,'********************')
+        recommender = RecommendationiEngine()
+        # recommended_book_category = recommender.get_recommendation(self.request.user.id, 0.1)
+        # print(recommended_book_category,'recommended_book_category')
+
+        
+        # recommended_book = Book.objects.filter(category_title=recommended_book_category)
+        # print('recommended_book = ',recommended_book)
         context['books'] = books
         context['categorys'] = categorys
 
         return context
+    def get_queryset(self):
+        category_pk = self.request.GET.get('pk', None)
+        print('category pk',category_pk)
+        if category_pk:
+            return Book.objects.filter(Book___pk=category_pk).order_by("id")
+        return Book.objects.order_by("id")
+
 
 
 def Bookdetail(request,pk):
