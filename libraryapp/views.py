@@ -121,7 +121,7 @@ class SearchView(TemplateView):
         context['books'] = books
         context['categorys'] = categorys
 
-        return context
+    return context
 
 
 def Bookdetail(request,pk):
