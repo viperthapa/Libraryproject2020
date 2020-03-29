@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.shortcuts import render,get_object_or_404,redirect
 from django.contrib import messages
 
-from .recommendation_engine import RecommendationiEngine
+# from .recommendation_engine import RecommendationiEngine
 
 # Create your views here.
 
@@ -75,17 +75,17 @@ class BookListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(BookListView, self).get_context_data(**kwargs)
-        recommender = RecommendationiEngine()
-        recommended_book_title = recommender.get_recommendation(self.request.user.id, 0.1)
-        print('recommended_book_title = ',recommended_book_title)
+        # recommender = RecommendationiEngine()
+        # recommended_book_title = recommender.get_recommendation(self.request.user.id, 0.1)
+        # print('recommended_book_title = ',recommended_book_title)
         # recommended_book = []
 
         # for book in Book.objects.filter(pk__in = recommended_book_id):
         #     recommended_book.append(book)
-        recommended_book = Book.objects.filter(title__in = recommended_book_title)
-        print('recommended_book = ',recommended_book)
+        # recommended_book = Book.objects.filter(title__in = recommended_book_title)
+        # print('recommended_book = ',recommended_book)
 
-        context['recommendation'] = recommended_book #['DAA', 'DBA']
+        # context['recommendation'] = recommended_book #['DAA', 'DBA']
         return context
 
     # def get_success_url(self):
