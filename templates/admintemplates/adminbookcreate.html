@@ -1,28 +1,16 @@
-{% extends 'admintemplates/adminbase.html' %}
-{% load static %}
-{% block content %}
+{% extends 'admintemplates/adminbase.html' %} {% load static %} {% block content
+%}
 <div class="container">
-	
-	<div class="row col-1 container">
-		<div class="col-md-12">
-			<h4>Add Book</h4>
-			<form method="post" enctype="multipart/form-data">
-				{% csrf_token %}
-				
-
-				{{form.as_p}}
-				<button class="btn btn-primary">submit</button>
-
-				
-
-
-			</form>
-				
-		</div>
-		<br>
-
-
-	</div>
+  <div class="row col-1 container">
+    <div class="col-md-12">
+      <h4>Add Book</h4>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{form.as_p}}
+        <button class="btn btn-primary">submit</button>
+      </form>
+    </div>
+    <br />
+  </div>
 </div>
 
 {% endblock %}
