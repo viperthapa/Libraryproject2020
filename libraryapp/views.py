@@ -13,6 +13,16 @@ from .recommendation_engine import RecommendationiEngine
 # Create your views here.
 
 
+"""
+------------------------------------------------------------
+    GLOBAL CORRELATION VALUE
+    THE HIGHER THE VALUE , MORE ACCURATE RESULTS
+    LIMIT = [0-1]
+------------------------------------------------------------
+"""
+CORRELATION_VALUE = 0.6         # set this value in range of (0, 1)
+
+
 class HomeView(TemplateView):
     template_name = 'libraniantemplates/libranianhome.html'
 
@@ -78,7 +88,7 @@ class BookListView(ListView):
         context = super(BookListView, self).get_context_data(**kwargs)
         recommender = RecommendationiEngine()
         recommended_book_title = recommender.get_recommendation(
-            self.request.user.id, 0.1)
+            self.request.user.id, CORRELATION_VALUE)
         print('recommended_book_title = ', recommended_book_title)
         recommended_book = []
 
@@ -144,7 +154,7 @@ class SearchView(TemplateView):
 
         print("***********SIMILAR BOOK: ", type(similar_books_title))
         recommended_book_title = recommender.get_recommendation_from_category(
-            similar_books_title, 0.1)
+            similar_books_title, CORRELATION_VALUE)
         print('*******', recommended_book_title)
 
         recommended_book = Book.objects.filter(

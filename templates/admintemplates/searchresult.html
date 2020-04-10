@@ -4,7 +4,7 @@
 	<div class="row">
 		{% if books %}
 			<div class="col-md-12 table-responsive-sm">
-				<h3>Book list</h3>
+				<h3>Search Results</h3>
 				{% if user.is_superuser %}
 						<a href="{% url 'libraryapp:bookcreate' %}" class="btn btn-info"><i class="fa fa-plus"></i></a>
 					{% endif %}
@@ -36,7 +36,13 @@
 							<td>{{forloop.counter}}</td>
 							<td>{{book.title}}</td>
 							<td>{{book.barcode}}</td>
-							<td><img src="{{book.image.url}}" width="75"></td>
+							<td>
+								{% if "https" in book.image %}
+									<img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+								{% else %}
+									<img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
+								{% endif %}
+							</td>
 							<td>{{book.category}}</td>
 
 
@@ -70,7 +76,11 @@
 					{% for book in recommendation %}
 
 					<a href="#"  class="btn btn-outline-secondary">
-						  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% if "https" in book.image %}
+							<img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% else %}
+							<img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% endif %}
 						  <br>
 
 						<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
