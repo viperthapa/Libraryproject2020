@@ -1,3 +1,5 @@
 # Default ignored files
 /workspace.xml
 .vscode
+*/__pycache__
+__pycache__
