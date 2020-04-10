@@ -1,0 +1,202 @@
+id,created_at,updated_at,title,barcode,category,publisher,author,image,available
+,,,The Hunger Games,439023483,3,Harper Collins Collins,Suzanne Collins,https://images.gr-assets.com/books/1447303603m/2767052.jpg,7
+,,,Harry Potter and the Philosopher's Stone,439554934,4,Harper Collins Collins,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1474154022m/3.jpg,24
+,,,To Kill a Mockingbird,61120081,4,Harper Collins Collins,Harper Collins Lee,https://images.gr-assets.com/books/1361975680m/2657.jpg,48
+,,,The Great Gatsby,743273567,4,Harper Collins Collins,F. Scott Fitzgerald,https://images.gr-assets.com/books/1490528560m/4671.jpg,17
+,,,The Fault in Our Stars,525478817,4,Harper Collins Collins,John Green,https://images.gr-assets.com/books/1360206420m/11870085.jpg,49
+,,,The Hobbit or There and Back Again,618260307,3,Nimble Books,J.R.R. Tolkien,https://images.gr-assets.com/books/1372847500m/5907.jpg,16
+,,,The Catcher in the Rye,316769177,4,Harper Collins Collins,J.D. Salinger,https://images.gr-assets.com/books/1398034300m/5107.jpg,25
+,,,Angels & Demons ,1416524797,4,Gramercy Books,Dan Brown,https://images.gr-assets.com/books/1303390735m/960.jpg,47
+,,,Pride and Prejudice,679783261,3,Vintage,Jane Austen,https://images.gr-assets.com/books/1320399351m/1885.jpg,2
+,,,The Kite Runner ,1594480001,4,Crown,Khaled Hosseini,https://images.gr-assets.com/books/1484565687m/77203.jpg,41
+,,,Divergent,62024035,4,Vintage,Veronica Roth,https://images.gr-assets.com/books/1328559506m/13335037.jpg,21
+,,,Nineteen Eighty-Four,451524934,4,Wings Books,"George Orwell, Erich Fromm, Celâl Üster",https://images.gr-assets.com/books/1348990566m/5470.jpg,24
+,,,Animal Farm: A Fairy Story,452284244,4,Broadway Books,George Orwell,https://images.gr-assets.com/books/1424037542m/7613.jpg,24
+,,,Het Achterhuis: Dagboekbrieven 14 juni 1942 - 1 augustus 1944,553296981,3,Broadway Books,"Anne Frank, Eleanor Roosevelt, B.M. Mooyaart-Doubleday",https://images.gr-assets.com/books/1358276407m/48855.jpg,34
+,,,Män som hatar kvinnor,307269752,4,Broadway Books,"Stieg Larsson, Reg Keeland",https://images.gr-assets.com/books/1327868566m/2429135.jpg,22
+,,,Catching Fire,439023491,4,Broadway Books,Suzanne Collins,https://images.gr-assets.com/books/1358273780m/6148028.jpg,3
+,,,Harry Potter and the Prisoner of Azkaban,043965548X,4,Broadway Books,"J.K. Rowling, Mary GrandPré, Rufus Beck",https://images.gr-assets.com/books/1499277281m/5.jpg,34
+,,, The Fellowship of the Ring,618346252,3,William Morrow Paperbacks,J.R.R. Tolkien,https://images.gr-assets.com/books/1298411339m/34.jpg,27
+,,,Mockingjay,439023513,4,William Morrow Paperbacks,Suzanne Collins,https://images.gr-assets.com/books/1358275419m/7260188.jpg,7
+,,,Harry Potter and the Order of the Phoenix,439358078,4,William Morrow Paperbacks,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1387141547m/2.jpg,41
+,,,The Lovely Bones,316166685,4,William Morrow Paperbacks,Alice Sebold,https://images.gr-assets.com/books/1457810586m/12232938.jpg,34
+,,,Harry Potter and the Chamber of Secrets,439064864,4,Ballantine Books,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1474169725m/15881.jpg,45
+,,,Harry Potter and the Goblet of Fire,439139600,4,Houghton Mifflin Harcourt,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1361482611m/6.jpg,39
+,,,Harry Potter and the Deathly Hallows,545010225,3,Houghton Mifflin Harcourt,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1474171184m/136251.jpg,46
+,,,The Da Vinci Code,307277674,3,Houghton Mifflin Harcourt,Dan Brown,https://images.gr-assets.com/books/1303252999m/968.jpg,22
+,,,Harry Potter and the Half-Blood Prince,439785960,4,Houghton Mifflin Harcourt,"J.K. Rowling, Mary GrandPré",https://images.gr-assets.com/books/1361039191m/1.jpg,23
+,,,Lord of the Flies ,140283331,3,Houghton Mifflin Harcourt,William Golding,https://images.gr-assets.com/books/1327869409m/7624.jpg,27
+,,,An Excellent conceited Tragedie of Romeo and Juliet,743477111,4,Pragmatic Bookshelf,"William Shakespeare, Robert           Jackson",https://images.gr-assets.com/books/1327872146m/18135.jpg,40
+,,,Gone Girl,297859382,4,Atheneum Books for Young Readers: Richard Jackson Books,Gillian Flynn,https://images.gr-assets.com/books/1339602131m/8442457.jpg,50
+,,,The Help,399155341,3,Teacher Created Resources,Kathryn Stockett,https://images.gr-assets.com/books/1346100365m/4667024.jpg,49
+,,,Of Mice and Men ,142000671,3,Delacorte Press,John Steinbeck,https://images.gr-assets.com/books/1437235233m/890.jpg,35
+,,,Memoirs of a Geisha,739326228,3,Cherry Lane Music Company,Arthur Golden,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,22
+,,,Fifty Shades of Grey,1612130291,3,The New Press,E.L. James,https://images.gr-assets.com/books/1385207843m/10818853.jpg,12
+,,,O Alquimista,61122416,4,Changeling Press,"Paulo Coelho, Alan R. Clarke",https://images.gr-assets.com/books/1483412266m/865.jpg,13
+,,,The Giver,385732554,3,Viking Juvenile,Lois Lowry,https://images.gr-assets.com/books/1342493368m/3636.jpg,38
+,,,"The Lion, the Witch and the Wardrobe",60764899,4,Firebird,C.S. Lewis,https://images.gr-assets.com/books/1353029077m/100915.jpg,47
+,,,The Time Traveler's Wife,965818675,4,iUniverse,Audrey Niffenegger,https://images.gr-assets.com/books/1437728815m/14050.jpg,50
+,,,A Game of Thrones,553588486,3,Shambhala,George R.R. Martin,https://images.gr-assets.com/books/1436732693m/13496.jpg,21
+,,,"Eat, pray, love: one woman's search for everything across Italy, India and Indonesia",143038419,4,Ivy Books,Elizabeth Gilbert,https://images.gr-assets.com/books/1503066414m/19501.jpg,23
+,,,The Lightning Thief,786838655,3,Amistad,Rick Riordan,https://images.gr-assets.com/books/1400602609m/28187.jpg,18
+,,,Little Women,451529308,3,Harper Collins,Louisa May Alcott,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,45
+,,,Jane Eyre,142437204,3,Harper Collins,"Charlotte Brontë, Michael Mason",https://images.gr-assets.com/books/1327867269m/10210.jpg,8
+,,,The Notebook,553816713,3,FT Press,Nicholas Sparks,https://images.gr-assets.com/books/1385738917m/15931.jpg,47
+,,,Life of Pi,770430074,4,Archaia,Yann Martel,https://images.gr-assets.com/books/1320562005m/4214.jpg,7
+,,,Water for Elephants,1565125606,3,Harper Collins,Sara Gruen,https://images.gr-assets.com/books/1494428973m/43641.jpg,9
+,,,The Book Thief,375831002,4,Farrar Straus Giroux,Markus Zusak,https://images.gr-assets.com/books/1390053681m/19063.jpg,37
+,,,Fahrenheit 451,307347974,4,Harper Collins Collins,Ray Bradbury,https://images.gr-assets.com/books/1351643740m/4381.jpg,23
+,,,"New Moon (Twilight, #2)",316160199,4,Harper Collins Collins,Stephenie Meyer,https://images.gr-assets.com/books/1361039440m/49041.jpg,44
+,,,Where the Sidewalk Ends: The Poems and Drawings of Shel Silverstein,60513039,4,Harper Collins Collins,Shel Silverstein,https://images.gr-assets.com/books/1168052448m/30119.jpg,41
+,,,Eclipse,316160202,3,Harper Collins Collins,Stephenie Meyer,https://images.gr-assets.com/books/1361038355m/428263.jpg,13
+,,,Eragon,375826696,3,Harper Collins Collins,Christopher Paolini,https://images.gr-assets.com/books/1366212852m/113436.jpg,45
+,,,The Hitchhiker's Guide to the Galaxy,345391802,3,Harper Collins Collins,Douglas Adams,https://images.gr-assets.com/books/1327656754m/11.jpg,48
+,,,Brave New World,60929871,4,Harper Collins Collins,Aldous Huxley,https://images.gr-assets.com/books/1487389574m/5129.jpg,2
+,,,Breaking Dawn,031606792X,4,Dramatists Play Service,Stephenie Meyer,https://images.gr-assets.com/books/1361039438m/1162543.jpg,7
+,,,The Secret Life of Bees,142001740,4,Vintage,Sue Monk Kidd,https://images.gr-assets.com/books/1473454532m/37435.jpg,49
+,,,The Adventures of Huckleberry Finn,142437174,3,Routledge,"Mark Twain, John Seelye, Guy Cardwell",https://images.gr-assets.com/books/1405973850m/2956.jpg,40
+,,,Charlotte's Web,64410935,3,North Light Books,"E.B. White, Garth Williams, Rosemary Wells",https://images.gr-assets.com/books/1439632243m/24178.jpg,41
+,,,The Curious Incident of the Dog in the Night-Time,1400032717,3,Chosen Books,Mark Haddon,https://images.gr-assets.com/books/1479863624m/1618.jpg,42
+,,,The Girl on the Train,1594633665,4,Association for Supervision & Curriculum Development,Paula Hawkins,https://images.gr-assets.com/books/1490903702m/22557272.jpg,32
+,,,Wuthering Heights,393978893,4,Kingfisher,"Emily Brontë, Richard J. Dunn",https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,4
+,,,My Sister's Keeper,743454537,4,ASCD,Jodi Picoult,https://images.gr-assets.com/books/1369504683m/10917.jpg,47
+,,,"Slaughterhouse-Five, or The Children's Crusade: A Duty-Dance with Death ",385333846,4,Sovereign World,Kurt Vonnegut Jr.,https://images.gr-assets.com/books/1440319389m/4981.jpg,35
+,,,Gone with the Wind,446675539,3,Workman Publishing Company,Margaret Mitchell,https://images.gr-assets.com/books/1328025229m/18405.jpg,34
+,,,A Thousand Splendid Suns,1594489505,3,One Hour Entertainment,Khaled Hosseini,https://images.gr-assets.com/books/1345958969m/128029.jpg,19
+,,,The Perks of Being a Wallflower,671027344,3,North Light Books,Stephen Chbosky,https://images.gr-assets.com/books/1167352178m/22628.jpg,19
+,,,Insurgent,7442912,4,Ace Books,Veronica Roth,https://images.gr-assets.com/books/1325667729m/11735983.jpg,32
+,,,Ender's Game,812550706,3,Ace Books,Orson Scott Card,https://images.gr-assets.com/books/1408303130m/375802.jpg,24
+,,,"Frankenstein; or, The Modern Prometheus",141439475,4,Ace Books,"Mary Wollstonecraft Shelley, Percy Bysshe Shelley, Maurice Hindle",https://images.gr-assets.com/books/1381512375m/18490.jpg,34
+,,,The Shining,450040186,4,Tor Books,Stephen King,https://images.gr-assets.com/books/1353277730m/11588.jpg,46
+,,,The Host,316068047,4,Putnam,Stephenie Meyer,https://images.gr-assets.com/books/1318009171m/1656001.jpg,15
+,,,Looking for Alaska,142402516,4,Tor Science Fiction,John Green,https://images.gr-assets.com/books/1394798630m/99561.jpg,19
+,,,Sense and Sensibility,141439661,4,Ace Books,"Jane Austen, Tony Tanner, Ros Ballaster",https://images.gr-assets.com/books/1397245675m/14935.jpg,36
+,,,Holes,439244196,3,Houghton Mifflin Harcourt,"Louis Sachar, Louis Sachar",https://images.gr-assets.com/books/1327781893m/38709.jpg,2
+,,,The Devil Wears Prada,307275558,3,Ballantine Books,Lauren Weisberger,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,34
+,,,Le Petit Prince,156012197,4,Thomas Nelson,"Antoine de Saint-Exupéry, Richard Howard, Dom Marcos Barbosa, Melina Karakosta",https://images.gr-assets.com/books/1367545443m/157993.jpg,23
+,,,The Glass Castle,074324754X,4,Wiley,Jeannette Walls,https://images.gr-assets.com/books/1400930557m/7445.jpg,17
+,,,A Tale of Two Cities,141439602,4,Heinemann Drama,"Charles Dickens, Richard Maxwell, Hablot Knight Browne",https://images.gr-assets.com/books/1344922523m/1953.jpg,9
+,,,Jurassic Park,030734813X,3,Wiley,Michael Crichton,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,38
+,,,The Giving Tree,60256656,3,McGraw-Hill,Shel Silverstein,https://images.gr-assets.com/books/1174210942m/370493.jpg,2
+,,,A Time to Kill,385338600,3,Wiley,John Grisham,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,33
+,,,Un di Velt Hot Geshvign,374500010,4,Wiley,"Elie Wiesel, Marion Wiesel",https://images.gr-assets.com/books/1473495285m/1617.jpg,47
+,,,Paper Towns,014241493X,4,Wiley,John Green,https://images.gr-assets.com/books/1349013610m/6442769.jpg,32
+,,,The Princess Bride,345418263,4,Wiley,William Goldman,https://images.gr-assets.com/books/1327903636m/21787.jpg,10
+,,,The Outsiders,014038572X,3,O'Reilly Media,S.E. Hinton,https://images.gr-assets.com/books/1442129426m/231804.jpg,6
+,,,The Maze Runner,385737947,3,Citadel,James Dashner,https://images.gr-assets.com/books/1375596592m/6186357.jpg,37
+,,,Freakonomics: A Rogue Economist Explores the Hidden Side of Everything,61234001,3,Citadel,"Steven D. Levitt, Stephen J. Dubner",https://images.gr-assets.com/books/1327909092m/1202.jpg,35
+,,,The Secret Garden,517189607,4,O'Reilly Media,Frances Hodgson Burnett,https://images.gr-assets.com/books/1327873635m/2998.jpg,41
+,,,Cien años de soledad,60531045,3,Penguin Classics,"Gabriel García Márquez, Gregory Rabassa",https://images.gr-assets.com/books/1327881361m/320.jpg,32
+,,,The Picture of Dorian Gray,375751513,4,Signet,"Oscar Wilde, Jeffrey Eugenides",https://images.gr-assets.com/books/1424596966m/5297.jpg,2
+,,,Fifty Shades Freed,345803507,3,Penguin Books,E.L. James,https://images.gr-assets.com/books/1336418837m/13536860.jpg,49
+,,,Dracula,393970124,4,Cliffs Notes,"Bram Stoker, Nina Auerbach, David J. Skal",https://images.gr-assets.com/books/1387151694m/17245.jpg,9
+,,,Flickan som lekte med elden,307269981,4,Barnes & Noble Classics,"Stieg Larsson, Reg Keeland",https://images.gr-assets.com/books/1351778881m/5060378.jpg,19
+,,,Fifty Shades Darker,1612130585,4,Dover Publications,E.L. James,https://images.gr-assets.com/books/1358266080m/11857408.jpg,4
+,,,The Poisonwood Bible,60786507,3,Barnes & Noble,Barbara Kingsolver,https://images.gr-assets.com/books/1412242487m/7244.jpg,24
+,,,Me Talk Pretty One Day,349113912,4,Mira Books,David Sedaris,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,40
+,,,Where the Wild Things Are,99408392,3,Cambridge University Press,Maurice Sendak,https://images.gr-assets.com/books/1384434560m/19543.jpg,37
+,,,Le Comte de Monte-Cristo,140449264,3,Penguin Books,"Alexandre Dumas, Robin Buss",https://images.gr-assets.com/books/1309203605m/7126.jpg,38
+,,,The Road,307265439,4,Vintage,Cormac McCarthy,https://images.gr-assets.com/books/1439197219m/6288.jpg,22
+,,,Allegiant,7524277,3,Buccaneer Books,Veronica Roth,https://images.gr-assets.com/books/1395582745m/18710190.jpg,9
+,,,A Walk to Remember,446693804,4,Scribner,Nicholas Sparks,https://images.gr-assets.com/books/1385738968m/3473.jpg,34
+,,,Confessions of a Shopaholic,440241413,3,Clarity Press,Sophie Kinsella,https://images.gr-assets.com/books/1327872404m/9416.jpg,36
+,,,Les Misérables,451525264,3,Rowman & Littlefield Publishers,"Victor Hugo, Lee Fahnestock, Norman MacAfee",https://images.gr-assets.com/books/1411852091m/24280.jpg,19
+,,,The Memory Keeper's Daughter,143037145,4,Pearson,Kim Edwards,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,10
+,,,Me Before You,670026603,4,Teacher Created Resources,Jojo Moyes,https://images.gr-assets.com/books/1357108762m/15507958.jpg,45
+,,,Catch-22,684833395,4,Harper Collins Perennial,Joseph Heller,https://images.gr-assets.com/books/1463157317m/168668.jpg,35
+,,,Tuesdays with Morrie,751529818,4,EMC/Paradigm Publishing,"Mitch Albom, Saulius Dagys",https://images.gr-assets.com/books/1423763749m/6900.jpg,9
+,,,Middlesex,312422156,4,Teaching Resources,Jeffrey Eugenides,https://images.gr-assets.com/books/1437029776m/2187.jpg,24
+,,,The Adventures of Tom Sawyer,143039563,3,Turtleback Books,"Mark Twain, Guy Cardwell, John Seelye",https://images.gr-assets.com/books/1404811979m/24583.jpg,17
+,,,A Wrinkle in Time,440498058,4,Little  Brown Book Group,Madeleine L'Engle,https://images.gr-assets.com/books/1329061522m/18131.jpg,14
+,,,The Joy Luck Club,143038095,4,William Morrow,Amy Tan,https://images.gr-assets.com/books/1304978653m/7763.jpg,19
+,,,The Handmaid's Tale,038549081X,3,Atria Books,Margaret Atwood,https://images.gr-assets.com/books/1498057733m/38447.jpg,28
+,,,The Sisterhood of the Traveling Pants,385729332,3,Tor Books,Ann Brashares,https://images.gr-assets.com/books/1461611233m/452306.jpg,27
+,,,Wicked: The Life and Times of the Wicked Witch of the West,60987103,4,Vintage Crime/Black Lizard,"Gregory Maguire, Douglas Smith",https://images.gr-assets.com/books/1437733293m/37442.jpg,28
+,,,Room,316098337,3,Vintage Crime/Black Lizard,Emma Donoghue,https://images.gr-assets.com/books/1344265419m/7937843.jpg,28
+,,,"The Tragicall Historie of Hamlet, Prince of Denmark",521618746,4,Vintage Crime/Black Lizard,"William Shakespeare, Richard Andrews, Rex Gibson",https://images.gr-assets.com/books/1351051208m/1420.jpg,27
+,,,Dune,340839937,3,Vintage,Frank Herbert,https://images.gr-assets.com/books/1434908555m/234225.jpg,7
+,,,The Tipping Point: How Little Things Can Make a Big Difference,316346624,3,Picador USA,Malcolm Gladwell,https://images.gr-assets.com/books/1473396980m/2612.jpg,25
+,,,Steve Jobs,1451648537,4,Sterling,Walter Isaacson,https://images.gr-assets.com/books/1327861368m/11084145.jpg,48
+,,,One Flew Over the Cuckoo's Nest,451163966,3,Puffin,Ken Kesey,https://images.gr-assets.com/books/1485308778m/332613.jpg,29
+,,,The Old Man and the Sea,684830493,4,New Directions Publishing,Ernest Hemingway,https://images.gr-assets.com/books/1329189714m/2165.jpg,50
+,,,The Grapes of Wrath,142000663,4,Grove Press,John Steinbeck,https://images.gr-assets.com/books/1352912927m/4395.jpg,9
+,,,The Five People You Meet in Heaven,1401308589,4,Grove Press,Mitch Albom,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,10
+,,,Anne of Green Gables,451528824,3,Grove Press,L.M. Montgomery,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,41
+,,,A Storm of Swords,055357342X,3,Grove Press,George R.R. Martin,https://images.gr-assets.com/books/1497931121m/62291.jpg,25
+,,,Divine Secrets of the Ya-Ya Sisterhood,006075995X,3,Grove Press,Rebecca Wells,https://images.gr-assets.com/books/1408313524m/137791.jpg,45
+,,,Outlander,440242940,3,New Directions,Diana Gabaldon,https://images.gr-assets.com/books/1402600310m/10964.jpg,17
+,,,The Scarlet Letter,142437263,4,Penguin Classics,"Nathaniel Hawthorne, Thomas E. Connolly, Nina Baym",https://images.gr-assets.com/books/1404810944m/12296.jpg,15
+,,,Miss Peregrine’s Home for Peculiar Children,1594744769,3,Barnes  Noble Classics,Ransom Riggs,https://images.gr-assets.com/books/1472782916m/9460487.jpg,37
+,,,Luftslottet som sprängdes,030726999X,3,Brookline Books,"Stieg Larsson, Reg Keeland",https://images.gr-assets.com/books/1327708260m/6892870.jpg,9
+,,,The Martian,804139024,3,The New Press,Andy Weir,https://images.gr-assets.com/books/1413706054m/18007564.jpg,45
+,,,The Pillars of the Earth,451207149,3,Pantheon,Ken Follett,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,2
+,,,"Unbroken: A World War II Story of Survival, Resilience, and Redemption",1400064163,4,One World (UK),Laura Hillenbrand,https://images.gr-assets.com/books/1327861115m/8664353.jpg,12
+,,,Deception Point,671027387,4,Interlink Publishing Group,Dan Brown,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,17
+,,,The Goldfinch,316055433,3,Penguin Books,Donna Tartt,https://images.gr-assets.com/books/1451554970m/17333223.jpg,14
+,,,Thirteen Reasons Why,1595141715,4,Knopf,Jay Asher,https://images.gr-assets.com/books/1333822506m/1217100.jpg,39
+,,,Girl with a Pearl Earring,452287022,4,Citadel,Tracy Chevalier,https://images.gr-assets.com/books/1327197580m/2865.jpg,50
+,,,If I Stay,525421033,4,Knopf,Gayle Forman,https://images.gr-assets.com/books/1347462970m/4374400.jpg,35
+,,,The Red Tent,312353766,3,Kingfisher,Anita Diamant,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,40
+,,,The Sea of Monsters,786856866,4,Sterling Children's Books,Rick Riordan,https://images.gr-assets.com/books/1400602661m/28186.jpg,41
+,,,Dear John,446528056,4,Simon & Schuster,Nicholas Sparks,https://images.gr-assets.com/books/1397749854m/5526.jpg,41
+,,,The Tragedy of Macbeth,743477103,4,Gramercy Books,William Shakespeare,https://images.gr-assets.com/books/1459795224m/8852.jpg,26
+,,,The Two Towers,618346260,4,Abdo Publishing Company,J.R.R. Tolkien,https://images.gr-assets.com/books/1298415523m/15241.jpg,22
+,,,Something Borrowed,031232118X,4,Black Classic Press,Emily Giffin,https://images.gr-assets.com/books/1305063535m/42156.jpg,41
+,,,Green Eggs and Ham,394800168,3,French & European,"Dr. Seuss, לאה נאור",https://images.gr-assets.com/books/1468680100m/23772.jpg,17
+,,,Charlie and the Chocolate Factory,142403881,4,Random House Books for Young Readers,"Roald Dahl, Quentin Blake",https://images.gr-assets.com/books/1309211401m/6310.jpg,45
+,,,The Battle of the Labyrinth,1423101464,3,Zebra,Rick Riordan,https://images.gr-assets.com/books/1443142158m/2120932.jpg,16
+,,,Great Expectations,192833596,4,Greenwillow Books,Charles Dickens,https://images.gr-assets.com/books/1327920219m/2623.jpg,12
+,,,The Return of the King,345339738,3,Booket,J.R.R. Tolkien,https://images.gr-assets.com/books/1389977161m/18512.jpg,4
+,,,The Lost Hero,142311339X,3,Del Rey,Rick Riordan,https://images.gr-assets.com/books/1464201003m/7736182.jpg,28
+,,,Eleanor & Park,1250012570,4,Ace,Rainbow Rowell,https://images.gr-assets.com/books/1341952742m/15745753.jpg,5
+,,,A Feast for Crows,055358202X,4,Ace Books,George R.R. Martin,https://images.gr-assets.com/books/1429538615m/13497.jpg,9
+,,,Matched,525423648,3,Del Rey,Ally Condie,https://images.gr-assets.com/books/1367706191m/7735333.jpg,34
+,,,American Gods,747263744,3,Tor Books,Neil Gaiman,https://images.gr-assets.com/books/1258417001m/4407.jpg,10
+,,,The Stand,385199570,4,Pocket Books,"Stephen King, Bernie Wrightson",https://images.gr-assets.com/books/1213131305m/149267.jpg,31
+,,,The Last Song,446547565,3,Del Rey,Nicholas Sparks,https://images.gr-assets.com/books/1286549186m/6400090.jpg,19
+,,,Digital Fortress,552151696,4,Del Rey,Dan Brown,https://images.gr-assets.com/books/1360095966m/11125.jpg,6
+,,,Emma,141439580,3,Ballantine Books,"Jane Austen, Fiona Stafford",https://images.gr-assets.com/books/1373627931m/6969.jpg,38
+,,,Анна Каренина,345803922,4,Turtleback Books,"Leo Tolstoy, Louise Maude, Leo Tolstoj, Aylmer Maude",https://images.gr-assets.com/books/1352422904m/15823480.jpg,22
+,,,A Clockwork Orange,393312836,4,Samuel French  Inc.,Anthony Burgess,https://images.gr-assets.com/books/1348339306m/227463.jpg,45
+,,,The Shack: Where Tragedy Confronts Eternity,964729237,4,Princeton University Press,William Paul Young,https://images.gr-assets.com/books/1344270232m/1812457.jpg,22
+,,,The Last Olympian,739380338,3,W. W. Norton & Company,Rick Riordan,https://images.gr-assets.com/books/1327924597m/4502507.jpg,27
+,,,It,451169514,3,Simon & Schuster,Stephen King,https://images.gr-assets.com/books/1309376909m/18342.jpg,30
+,,,The Bell Jar,61148512,3,HMH Books for Young Readers,Sylvia Plath,https://images.gr-assets.com/books/1473890514m/6514.jpg,9
+,,,Angela's Ashes: A Memoir,7205236,3,Scribner,Frank McCourt,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,19
+,,,Siddhartha,553208845,3,Penguin,"Hermann Hesse, Hilda Rosner",https://images.gr-assets.com/books/1428715580m/52036.jpg,22
+,,,In Cold Blood,679745580,3,Penguin Books,Truman Capote,https://images.gr-assets.com/books/1424931136m/168642.jpg,32
+,,,Beautiful Creatures,316042676,4,Vintage Contemporaries,"Kami Garcia, Margaret Stohl",https://images.gr-assets.com/books/1327873282m/6304335.jpg,16
+,,,Clockwork Angel,1416975861,3,Scribner,Cassandra Clare,https://images.gr-assets.com/books/1454962884m/7171637.jpg,26
+,,,Matilda,141301066,3,Penguin Books,"Roald Dahl, Quentin Blake",https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,45
+,,,The Night Circus,385534639,4,Vintage,Erin Morgenstern,https://images.gr-assets.com/books/1387124618m/9361589.jpg,40
+,,,The Other Boleyn Girl,743227441,3,Penguin Press,Philippa Gregory,https://images.gr-assets.com/books/1355932638m/37470.jpg,17
+,,,Uglies,689865384,3,Harper Collins Perennial Modern Classics,Scott Westerfeld,https://images.gr-assets.com/books/1443904172m/24770.jpg,14
+,,,The Lord of the Rings,618640150,4,Harper Collins Perennial,J.R.R. Tolkien,https://images.gr-assets.com/books/1411114164m/33.jpg,12
+,,,Wild: From Lost to Found on the Pacific Crest Trail ,307592731,3,Penguin Books,Cheryl Strayed,https://images.gr-assets.com/books/1453189881m/12262741.jpg,2
+,,,Watchmen,930289234,3,Picador USA,"Alan Moore, Dave Gibbons, John Higgins",https://images.gr-assets.com/books/1442239711m/472331.jpg,13
+,,,The Name of the Wind,075640407X,3,Penguin Classics,Patrick Rothfuss,https://images.gr-assets.com/books/1472068073m/186074.jpg,12
+,,,Outliers: The Story of Success,316017922,4,Penguin Books,Malcolm Gladwell,https://images.gr-assets.com/books/1344266315m/3228917.jpg,19
+,,,"Moby Dick; or, The Whale",142437247,3,Back Bay Books,"Herman Melville, Andrew Delbanco, Tom Quirk",https://images.gr-assets.com/books/1327940656m/153747.jpg,34
+,,,The Guernsey Literary and Potato Peel Pie Society,385340990,4,Penguin Classics,"Mary Ann Shaffer, Annie Barrows",https://images.gr-assets.com/books/1351979318m/2728527.jpg,47
+,,,Fight Club,393327345,4,Knopf Publishing Group,Chuck Palahniuk,https://images.gr-assets.com/books/1357128997m/5759.jpg,11
+,,,Dead Until Dark,441008534,4,Farrar Straus Giroux,Charlaine Harris,https://images.gr-assets.com/books/1468560853m/301082.jpg,27
+,,,The Color Purple,671727796,4,Vintage International,Alice Walker,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,30
+,,,Marley & Me: Life and Love with the World's Worst Dog,739461192,3,Vintage,John Grogan,https://images.gr-assets.com/books/1308858322m/12691.jpg,6
+,,,Ten Little Niggers,312330871,3,Farrar Straus Giroux,Agatha Christie,https://images.gr-assets.com/books/1391120695m/16299.jpg,26
+,,,The Lost Symbol,385504225,3,Vintage International,Dan Brown,https://images.gr-assets.com/books/1358274396m/6411961.jpg,48
+,,,"Hush, Hush",1416989412,3,Everyman's Library,Becca Fitzpatrick,https://images.gr-assets.com/books/1358261334m/6339664.jpg,45
+,,,A Christmas Carol,1561797464,4,Harper Collins Collins,Charles Dickens,https://images.gr-assets.com/books/1406512317m/5326.jpg,7
+,,,Interview with the Vampire,345476875,4,Penguin Classics,Anne Rice,https://images.gr-assets.com/books/1380631642m/43763.jpg,49
+,,,The Selection,62059939,4,Penguin Books,Kiera Cass,https://images.gr-assets.com/books/1322103400m/10507293.jpg,17
+,,,One for the Money,312362080,4,Penguin Books,Janet Evanovich,https://images.gr-assets.com/books/1316730230m/6853.jpg,26
+,,,The Immortal Life of Henrietta Lacks,1400052173,3,Sun and Moon Press,Rebecca Skloot,https://images.gr-assets.com/books/1327878144m/6493208.jpg,25
+,,,The Silence of the Lambs,99446782,3,Sky Books (NY),Thomas Harris,https://images.gr-assets.com/books/1390426249m/23807.jpg,34
+,,,Blink: The Power of Thinking Without Thinking,316010669,3,Picador,Malcolm Gladwell,https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png,2
+,,,Atonement,038572179X,3,Penguin Books,Ian McEwan,https://images.gr-assets.com/books/1320449708m/6867.jpg,4
+,,,Die Verwandlung,553213695,4,Penguin Books,"Franz Kafka, Stanley Corngold",https://images.gr-assets.com/books/1359061917m/485894.jpg,6
+,,,The Titan's Curse,141382899,4,Henry Holt & Company,Rick Riordan,https://images.gr-assets.com/books/1361038385m/561456.jpg,26
+,,,The Art of Racing in the Rain,1554681723,3,Penguin Books,Garth Stein,https://images.gr-assets.com/books/1377206302m/3153910.jpg,5
+,,,"The Devil in the White City: Murder, Magic, and Madness at the Fair that Changed America",739303406,3,New Directions,"Erik Larson, Tony Goldwyn",https://images.gr-assets.com/books/1312066724m/21996.jpg,47
+,,,Bared to You,425263908,4,Actes Sud,Sylvia Day,https://images.gr-assets.com/books/1477803272m/13572249.jpg,26
+,,,The Chronicles of Narnia,66238501,3,Penguin Books Ltd. (London),"C.S. Lewis, Pauline Baynes",https://images.gr-assets.com/books/1449868701m/11127.jpg,30
+,,,Twilight: The Complete Illustrated Movie Companion,316043133,4,Business Plus,Mark Cotta Vaz,https://images.gr-assets.com/books/1352539022m/3609760.jpg,49

@@ -3,11 +3,11 @@
 {% block content %}
 	<div class="row">
 			{% if messages %}
-           	<ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-            </ul>
+				<ul class="messages">
+					{% for message in messages %}
+						<li>{{ message }}</li>
+					{% endfor %}
+				</ul>
             {% endif %}
 		<div class="col-md-12 table-responsive-sm">
 			<h3>Book list</h3>
@@ -42,7 +42,17 @@
 						<td>{{forloop.counter}}</td>
 						<td>{{book.title}}</td>
 						<td>{{book.barcode}}</td>
-						<td><img src="{{book.image.url}}" width="75"></td>
+						<td>
+							{% comment %} <img src="{{book.image}}" width="75"> {% endcomment %}
+							
+							{% if book.image == "book" %}
+								<img src="{{ book.image.url }}" width="75">
+								<script>console.log("local image")</script>
+							{% else %}
+								<img src="{{ book.image }}" width="75">
+								<script>console.log("web image")</script>
+							{% endif %}
+						</td>
 						<td>{{book.category}}</td>
 
 
@@ -56,8 +66,6 @@
 
 								</td>
 							{% endif %}
-
-
 						<td>
 								<a href="{% url 'libraryapp:bookdetail' book.id %}" class="btn btn-primary btn-sm" role="button">Give Rating</a>
 
@@ -75,7 +83,11 @@
 				{% for book in recommendation %}
 
 				<a href="#"  class="btn btn-outline-secondary">
-					  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% if "https" in book.image %}
+							<img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% else %}
+							<img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						{% endif %}
 					  <br>
 	  
 					<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>

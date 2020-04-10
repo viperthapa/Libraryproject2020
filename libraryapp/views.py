@@ -5,10 +5,10 @@ from .forms import *
 from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse_lazy
 from django.db.models import Q
-from django.shortcuts import render,get_object_or_404,redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 
-# from .recommendation_engine import RecommendationiEngine
+from .recommendation_engine import RecommendationiEngine
 
 # Create your views here.
 
@@ -23,7 +23,7 @@ class ContactView(CreateView):
     success_url = '/'
 
 
-#login form
+# login form
 class LoginForm(FormView):
     template_name = 'libraniantemplates/login.html'
     form_class = LoginForm
@@ -42,15 +42,15 @@ class LoginForm(FormView):
         return super().form_valid(form)
 
 
-#logout
+# logout
 class LogoutView(View):
     def get(self, request):
         logout(request)
         return redirect('/login/')
 
+# user registration
 
 
-#user registration
 class UserRegistration(CreateView):
     template_name = 'libraniantemplates/register.html'
     form_class = UserForm
@@ -64,6 +64,7 @@ class UserRegistration(CreateView):
         # login(self.request, user)
         return super().form_valid(form)
 
+
 class AdminHome(TemplateView):
     template_name = 'admintemplates/adminhome.html'
 
@@ -75,17 +76,19 @@ class BookListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(BookListView, self).get_context_data(**kwargs)
-        # recommender = RecommendationiEngine()
-        # recommended_book_title = recommender.get_recommendation(self.request.user.id, 0.1)
-        # print('recommended_book_title = ',recommended_book_title)
-        # recommended_book = []
+        recommender = RecommendationiEngine()
+        recommended_book_title = recommender.get_recommendation(
+            self.request.user.id, 0.1)
+        print('recommended_book_title = ', recommended_book_title)
+        recommended_book = []
 
-        # for book in Book.objects.filter(pk__in = recommended_book_id):
-        #     recommended_book.append(book)
-        # recommended_book = Book.objects.filter(title__in = recommended_book_title)
-        # print('recommended_book = ',recommended_book)
+        for book in Book.objects.filter(title__in=recommended_book_title):
+            recommended_book.append(book)
+        recommended_book = Book.objects.filter(
+            title__in=recommended_book_title)
+        print('recommended_book = ', recommended_book)
 
-        # context['recommendation'] = recommended_book #['DAA', 'DBA']
+        context['recommendation'] = recommended_book  # ['DAA', 'DBA']
         return context
 
     # def get_success_url(self):
@@ -96,6 +99,7 @@ class BookCreateView(CreateView):
     template_name = 'admintemplates/adminbookcreate.html'
     form_class = BookForm
     success_url = '/admin/book/list/'
+
 
 class BooKUpdateView(UpdateView):
     template_name = 'admintemplates/adminbookcreate.html'
@@ -110,7 +114,7 @@ class BookdeleteView(DeleteView):
     success_url = reverse_lazy("libraryapp:booklist")
 
 
-#search view
+# search view
 
 class SearchView(TemplateView):
     template_name = 'admintemplates/searchresult.html'
@@ -122,11 +126,10 @@ class SearchView(TemplateView):
             Q(title__icontains=keyword) | Q(author__icontains=keyword))
         # categorys = BookCategory.objects.filter(Q(title__icontains=keyword))
         categorys = BookCategory.objects.all()
-        print(categorys,'********************')
+        print(categorys, '********************')
         recommender = RecommendationiEngine()
         # recommended_book_category = recommender.get_recommendation(self.request.user.id, 0.1)
         # print(recommended_book_category,'recommended_book_category')
-
 
         # recommended_book = Book.objects.filter(category_title=recommended_book_category)
         # print('recommended_book = ',recommended_book)
@@ -134,45 +137,45 @@ class SearchView(TemplateView):
         context['categorys'] = categorys
 
         similar_books_title = []
-        print(similar_books_title,"~~~~")
+        print(similar_books_title, "~~~~")
 
         for book in books:
             similar_books_title.append(book.title)
 
         print("***********SIMILAR BOOK: ", type(similar_books_title))
-        recommended_book_title = recommender.get_recommendation_from_category(similar_books_title, 0.1)
-        print('*******',recommended_book_title)
+        recommended_book_title = recommender.get_recommendation_from_category(
+            similar_books_title, 0.1)
+        print('*******', recommended_book_title)
 
-        recommended_book = Book.objects.filter(title__in = recommended_book_title)
-        print('&&&&&&',recommended_book)
+        recommended_book = Book.objects.filter(
+            title__in=recommended_book_title)
+        print('&&&&&&', recommended_book)
 
+        print('recommended_book = ', recommended_book)
 
-        print('recommended_book = ',recommended_book)
-
-        context['recommendation'] = recommended_book #['DAA', 'DBA']
+        context['recommendation'] = recommended_book  # ['DAA', 'DBA']
 
         return context
 
     def get_queryset(self):
         category_pk = self.request.GET.get('pk', None)
-        print('category pk',category_pk)
+        print('category pk', category_pk)
         if category_pk:
             return Book.objects.filter(Book___pk=category_pk).order_by("id")
         return Book.objects.order_by("id")
 
 
-
-def Bookdetail(request,pk):
-    book = get_object_or_404(Book,id=pk)
+def Bookdetail(request, pk):
+    book = get_object_or_404(Book, id=pk)
     if request.method == "POST":
-        rate=request.POST['rating']
+        rate = request.POST['rating']
         ratingObject = BookRating()
         # print(ratingObject.user.id,"********")
         # print(ratingObject.request.user,'***')
-        ratingObject.user=request.user
-        ratingObject.book=book
-        ratingObject.rating=rate
+        ratingObject.user = request.user
+        ratingObject.book = book
+        ratingObject.rating = rate
         ratingObject.save()
-        messages.success(request,"Your Rating is submited ")
+        messages.success(request, "Your Rating is submited ")
         return redirect("libraryapp:booklist")
-    return render(request,'admintemplates/bookrating.html',{'book':book})
+    return render(request, 'admintemplates/bookrating.html', {'book': book})
