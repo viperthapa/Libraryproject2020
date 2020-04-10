@@ -76,16 +76,11 @@
 					{% for book in recommendation %}
 
 					<a href="#"  class="btn btn-outline-secondary">
-<<<<<<< HEAD
-						
-						  <img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
-=======
-						{% if "https" in book.image %}
+						{% if book.image == 'https' %}
 							<img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
 						{% else %}
 							<img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
 						{% endif %}
->>>>>>> ddbbcdd5c9027eddd421f8776d5b22c7dd716ad3
 						  <br>
 
 						<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
