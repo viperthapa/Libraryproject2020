@@ -36,7 +36,7 @@
 							<td>{{forloop.counter}}</td>
 							<td>{{book.title}}</td>
 							<td>{{book.barcode}}</td>
-							<td><img src="{{book.image.url}}" width="75"></td>
+							<td><img src="{{book.image}}" width="75"></td>
 							<td>{{book.category}}</td>
 
 
@@ -70,7 +70,8 @@
 					{% for book in recommendation %}
 
 					<a href="#"  class="btn btn-outline-secondary">
-						  <img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
+						
+						  <img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
 						  <br>
 
 						<button style="margin:3px 0px 0px 7px;width: 150px;" class="btn btn-lg btn-danger">{{ book.title }}</button>
