@@ -135,7 +135,7 @@ class Book(TimeStamp):
 
 
 class BookRating(models.Model):
-	user   	= models.ForeignKey(User,on_delete=models.CASCADE) 
+	user   	= models.ForeignKey(User,on_delete=models.CASCADE,null =True) 
 	book 	= models.ForeignKey(Book,on_delete=models.CASCADE)
 	rating 	= models.IntegerField(default=1,validators=[MaxValueValidator(5),MinValueValidator(0)])
 		
