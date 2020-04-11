@@ -20,7 +20,7 @@ from .recommendation_engine import RecommendationiEngine
     LIMIT = [0-1]
 ------------------------------------------------------------
 """
-CORRELATION_VALUE = 0.6         # set this value in range of (0, 1)
+CORRELATION_VALUE = 0.2         # set this value in range of (-1, 1)
 
 
 class HomeView(TemplateView):
@@ -90,13 +90,16 @@ class BookListView(ListView):
         recommended_book_title = recommender.get_recommendation(
             self.request.user.id, CORRELATION_VALUE)
         print('recommended_book_title = ', recommended_book_title)
-        recommended_book = []
 
-        for book in Book.objects.filter(title__in=recommended_book_title):
-            recommended_book.append(book)
+        # recommended_book = []
+        # for book in Book.objects.filter(title__in=recommended_book_title):
+        #     recommended_book.append(book)
+
+        # print("Recommended: ", recommended_book)
         recommended_book = Book.objects.filter(
             title__in=recommended_book_title)
-        print('recommended_book = ', recommended_book)
+        print('*************************************')
+        print('recommended_book: ', recommended_book)
 
         context['recommendation'] = recommended_book  # ['DAA', 'DBA']
         return context
@@ -153,15 +156,20 @@ class SearchView(TemplateView):
             similar_books_title.append(book.title)
 
         print("***********SIMILAR BOOK: ", type(similar_books_title))
+        print(similar_books_title)
+        print('************************')
         recommended_book_title = recommender.get_recommendation_from_category(
             similar_books_title, CORRELATION_VALUE)
-        print('*******', recommended_book_title)
+        print('recommended books: ', recommended_book_title)
 
         recommended_book = Book.objects.filter(
             title__in=recommended_book_title)
-        print('&&&&&&', recommended_book)
 
-        print('recommended_book = ', recommended_book)
+        # recommended_book = []
+        # for book in Book.objects.filter(title__in=recommended_book_title):
+        #     recommended_book.append(book)
+
+        print('recommended_book:', recommended_book)
 
         context['recommendation'] = recommended_book  # ['DAA', 'DBA']
 

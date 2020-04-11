@@ -43,6 +43,7 @@ class RecommendationiEngine():
         # find correlation between books
         self.book_list_matrix = self.books_mat.fillna(0)
         self.book_corr = np.corrcoef(self.book_list_matrix.T)
+        print("BOOK CORR: ", self.book_corr)
 
         self.book_titles = list(self.book_list_matrix)
         # book_titles = []
@@ -55,9 +56,11 @@ class RecommendationiEngine():
         return data
 
     def get_recommendation(self, user_id, corr_limit):
-        books_list = self.books_with_rating.loc[self.books_with_rating['user_id']
-                                                == user_id]['book_title']
-        books_list = list(books_list)
+        user_rated_books = self.books_with_rating.loc[self.books_with_rating['user_id']
+                                                      == user_id]['book_title']
+        books_list = list(user_rated_books)
+        print('********************')
+        print('User Rated Book List: ', books_list)
         # self.get_recommendation_list(book_list)
         book_similarities = np.zeros(self.book_corr.shape[0])
 
@@ -69,7 +72,7 @@ class RecommendationiEngine():
             book_similarities += self.book_corr[book_index]
 
         for i in range(len(self.book_titles)):
-            if book_similarities[i] > corr_limit:
+            if book_similarities[i] > corr_limit and self.book_titles[i] not in books_list:
                 # pass book title
                 book_preferences.append(self.book_titles[i])
 
