@@ -3,11 +3,11 @@
 {% block content %}
 	<div class="row">
 			{% if messages %}
-           	<ul class="messages">
-            {% for message in messages %}
-                < li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-            </ul>
+				<ul class="messages">
+					{% for message in messages %}
+						<li>{{ message }}</li>
+					{% endfor %}
+				</ul>
             {% endif %}
 		<div class="col-md-12 table-responsive-sm">
 			<h3>Book list</h3>
@@ -45,7 +45,7 @@
 						<td>
 							{% comment %} <img src="{{book.image}}" width="75"> {% endcomment %}
 							
-							{% if "book" in book.image %}
+							{% if book.image == "book" %}
 								<img src="{{ book.image.url }}" width="75">
 								<script>console.log("local image")</script>
 							{% else %}

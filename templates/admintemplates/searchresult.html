@@ -37,7 +37,7 @@
 							<td>{{book.title}}</td>
 							<td>{{book.barcode}}</td>
 							<td>
-								{% if "https" in book.image %}
+								{% if book.image == "book" %}
 									<img src="{{ book.image.url }}" style="width: 100px; margin-left: 1em;height: 100px;">
 								{% else %}
 									<img src="{{ book.image }}" style="width: 100px; margin-left: 1em;height: 100px;">
