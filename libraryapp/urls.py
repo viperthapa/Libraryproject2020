@@ -22,6 +22,7 @@ urlpatterns = [
          BookdeleteView.as_view(), name='bookdelete'),
     path("search/", SearchView.as_view(), name='search'),
     path('book/<int:pk>/',views.Bookdetail ,name='bookdetail'),
+    path('user/list/',views.UserList,name = "userlist"),
     
 
 

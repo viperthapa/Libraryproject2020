@@ -189,3 +189,11 @@ def Bookdetail(request, pk):
         messages.success(request, "Your Rating is submited ")
         return redirect("libraryapp:booklist")
     return render(request, 'admintemplates/bookrating.html', {'book': book})
+
+#user list 
+def UserList(request):
+    user = User.objects.all()
+    context = {
+        'user':user
+    }
+    return render(request,'libraniantemplates/user_list.html',context)

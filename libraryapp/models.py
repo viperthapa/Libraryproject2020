@@ -124,6 +124,7 @@ class Book(TimeStamp):
     publisher= models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     image = models.ImageField(upload_to = 'book')
+    file = models.FileField(upload_to='book_file',null=True)
     available = models.IntegerField(default=0)
 
 

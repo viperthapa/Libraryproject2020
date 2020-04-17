@@ -1,0 +1,43 @@
+{% extends 'admintemplates/adminbase.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+	
+
+			<table class="table table-bordered">
+				<thead class="thead-dark" style="background-color: #000000;color: white">
+					<tr>
+						<th scope="col">S.N</th>
+						<th scope="col">Username</th>
+						<th scope="col">Email</th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						
+					</tr>
+
+				</thead>
+				<tbody style="color:whitesmoke">
+					{% for user in user %}
+					<tr>
+						<td>{{forloop.counter}}</td>
+						<td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+						<td>{{user.first_name}}</td>
+						<td>{{user.last_name}}</td>
+                        
+						
+						
+					</tr>
+
+
+					{% endfor %}
+				</tbody>
+
+            </table>
+
+
+            
+            
+        
+	</div>		
+{% endblock %}
