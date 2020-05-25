@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'libraryapp',
-    'import_export'
+    'import_export',
+        'django_extensions'
+
 ]
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
